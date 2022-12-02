@@ -7,7 +7,7 @@ import AddNote from './components/AddNote';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename='/notes'>
         <Navbar />
         <Routes>
           <Route exact path='/' element={ <Home /> } />
