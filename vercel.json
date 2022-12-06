@@ -8,7 +8,7 @@
     "routes": [
         {
             "source": "/.*",
-            "destination": "server.js"
+            "destination": "/server/server.js"
         }
     ]
 }
