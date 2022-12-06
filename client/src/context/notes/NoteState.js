@@ -6,7 +6,7 @@ const NoteState = (props) => {
     const [notes, setNotes] = useState([]);
 
     const getNotes = async() => {
-        const response = await fetch(`${host}/notes`, {
+        const response = await fetch(`${host}/api/notes`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -17,7 +17,7 @@ const NoteState = (props) => {
     }
 
     const addNote = async(title, description, author) => {
-        const response = await fetch(`${host}/notes/addnote`, {
+        const response = await fetch(`${host}/api/notes/addnote`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ const NoteState = (props) => {
     }
 
     const editNote = async(id, title, description, author) => {
-        const response = await fetch(`${host}/notes/updatenote/${id}`, {
+        const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ const NoteState = (props) => {
     }
 
     const deleteNote = async(id) => {
-        await fetch(`${host}/notes/deletenote/${id}`, {
+        await fetch(`${host}/api/notes/deletenote/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
